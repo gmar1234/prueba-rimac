@@ -1,0 +1,114 @@
+.calculator {
+  margin-top: 60px;
+
+  &__details-responsive {
+    border-bottom: 1px solid #e4e8f7;
+    padding-bottom: 19px;
+    margin-bottom: 24px;
+    display: none;
+    @include respond(phone) {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button {
+      @include respond(phone) {
+        width: 168px !important;
+      }
+    }
+    .value {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.2px;
+      color: #494f66;
+      margin-top: 19px;
+    }
+
+    .plan {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #676f8f;
+    }
+  }
+
+  &__button {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__price {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &__lists {
+    margin-top: 24px;
+    list-style: none !important;
+    margin-bottom: 32px;
+    @include respond(phone) {
+      display: none;
+    }
+    li {
+      margin-bottom: 8px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      color: #676f8f;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #494f66;
+  }
+  &__details {
+    border-bottom: 1px solid #e4e8f7;
+    padding-bottom: 19px;
+    margin-bottom: 24px;
+    max-width: 224px;
+    @include respond(phone) {
+      display: none;
+    }
+    .value {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.2px;
+      color: #494f66;
+      margin-top: 19px;
+    }
+
+    .plan {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #676f8f;
+    }
+  }
+}

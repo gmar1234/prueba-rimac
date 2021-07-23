@@ -1,0 +1,16 @@
+.button {
+  font-size: 14px;
+  cursor: pointer;
+  &--primary {
+    background: #ef3340;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 192px;
+    height: 56px;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}

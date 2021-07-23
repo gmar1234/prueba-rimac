@@ -1,0 +1,13 @@
+.separator {
+  display: flex;
+  &--1,
+  &--2 {
+    height: 5px;
+    width: 15px;
+    background: #4df0e0;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}

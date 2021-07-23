@@ -1,0 +1,42 @@
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.rotate-img {
+  transform: scaleX(-1);
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  @include respond(phone) {
+    justify-content: flex-start;
+  }
+}
+
+@for $i from 1 through 50 {
+  .font-#{$i} {
+    font-size: #{$i + "px"};
+  }
+}
+
+@for $i from 1 through 100 {
+  .m-left-#{$i} {
+    margin-left: #{$i + "px"};
+  }
+  .m-right-#{$i} {
+    margin-right: #{$i + "px"};
+  }
+  .m-bottom-#{$i} {
+    margin-bottom: #{$i + "px"};
+  }
+  .m-top-#{$i} {
+    margin-top: #{$i + "px"};
+  }
+}

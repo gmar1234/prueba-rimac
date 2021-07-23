@@ -1,0 +1,24 @@
+.tag {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  &--water {
+    position: absolute;
+    bottom: 50px;
+    left: 121px;
+    font-weight: 100;
+    @include respond(phone) {
+      width: 112px;
+      height: 276px;
+      display: none;
+    }
+  }
+
+  &--new {
+    @include respond(phone) {
+      margin-bottom: 8px;
+    }
+  }
+}

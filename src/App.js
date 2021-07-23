@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { LoginComponent } from "./components/LoginComponent";
+import "./assets/style/style.scss";
+import { useState } from "react";
+import { Profile } from "./pages/profile/Profile";
 
 function App() {
+  const [view, setView] = useState("LOGIN");
+  const [person, setPerson] = useState("LOGIN");
+  const [data, setData] = useState({
+    document: "DNI",
+    number: "",
+    phone: "",
+    license: "",
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {view === "LOGIN" ? (
+        <LoginComponent
+          data={data}
+          setData={setData}
+          setView={setView}
+          setPerson={setPerson}
+        />
+      ) : (
+        <Profile person={person} data={data} />
+      )}
+    </>
   );
 }
 

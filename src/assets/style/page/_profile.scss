@@ -1,0 +1,243 @@
+.profile {
+  display: grid;
+  grid-template-columns: 408px 1fr;
+  grid-template-rows: 64px 1fr;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  @include respond(phone) {
+    grid-template-areas:
+      "header header"
+      "content content";
+  }
+  &__header {
+    grid-area: header;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e8f7;
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+    background-color: #f7f8fc;
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__content {
+    grid-area: content;
+    background-color: #fff;
+    padding: 96px 52px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+    margin-top: 28px;
+    p {
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 28px;
+      color: #676f8f;
+      margin-top: 8px;
+    }
+  }
+  &__details {
+    background: #ffffff;
+    border: 3px solid #f0f2fa;
+    box-sizing: border-box;
+    border-radius: 12px;
+    position: relative;
+    width: 384px;
+    height: 172px;
+    border-radius: 12px;
+    padding: 32px 40px;
+    margin-top: 44px;
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__model {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__license {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #a3abcc;
+  }
+
+  &__stats {
+    margin-top: 55px;
+    border-bottom: 1px solid #e4e8f7;
+    display: flex;
+    justify-content: space-between;
+    width: 384px;
+    padding-bottom: 43px;
+  }
+
+  &__costs {
+    p {
+      &:first-child {
+        box-sizing: border-box;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__sum {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #494f66;
+  }
+
+  &__sum-value {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #676f8f;
+  }
+
+  &__calculator {
+    border: 1px solid #c5cbe0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 160px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      color: #6f7dff;
+      font-size: 30px;
+      font-weight: 400;
+      &:first-child {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+
+    .value {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: #494f66;
+    }
+  }
+
+  &__title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    color: #494f66;
+    margin-top: 55px;
+  }
+
+  &__tabs {
+    display: flex;
+    .tabs {
+      flex: 1;
+      text-align: center;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 30px;
+      border-bottom: 1px solid #e4e8f7;
+      &.active {
+        color: #ef3340;
+        border-bottom: 2px solid #ef3340;
+      }
+    }
+  }
+}
+
+.tabs-content {
+  position: relative;
+  margin-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e4e8f7;
+  .tabs-image {
+    position: absolute;
+    left: 0;
+  }
+  .tabs-options {
+    display: flex;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    p {
+      color: #6f7dff;
+      margin-left: 10px;
+    }
+  }
+  .tabs-details {
+    padding-left: 60px;
+  }
+  .tabs-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #676f8f;
+  }
+
+  .tabs-arrow {
+    position: absolute;
+    right: 0;
+  }
+}

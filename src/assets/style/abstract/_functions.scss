@@ -1,0 +1,13 @@
+@function em($px, $base: 16px) {
+  @if type-of($px) == number and unit($px) == "px" {
+    @return $px/$base * 1em;
+  }
+  @return null;
+}
+
+@function rem($px, $base: 10px) {
+  @if type-of($px) == number and unit($px) == "px" {
+    @return $px/$base * 1rem;
+  }
+  @return null;
+}

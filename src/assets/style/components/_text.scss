@@ -1,0 +1,39 @@
+.title {
+  font-family: Lato;
+  font-weight: 400;
+  margin-bottom: 24px;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.2px;
+  color: #494f66;
+}
+
+.text {
+  font-family: "Roboto", sans-serif !important;
+  letter-spacing: 0.2px;
+  color: #676f8f;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 24px;
+
+  &--header {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &--login-details {
+    @include respond(phone) {
+      width: 183px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #676f8f;
+}

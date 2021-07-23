@@ -1,0 +1,72 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 800px 1fr;
+  @include respond(tab-land) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  &__img {
+    background-image: url(../../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include respond(phone) {
+      background-image: none;
+      background-color: #f7f8fc;
+    }
+    &--full {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &--phone {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      @include respond(phone) {
+        display: block;
+      }
+    }
+  }
+  &__data {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__body {
+    width: 288px;
+  }
+
+  &__title {
+    line-height: 48px;
+    letter-spacing: -0.2px;
+    font-size: 36px;
+    @include respond(phone) {
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: -0.6px;
+      font-weight: 500;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 34px;
+    left: 121px;
+    @include respond(phone) {
+      top: 20px;
+      left: 32px;
+    }
+  }
+}

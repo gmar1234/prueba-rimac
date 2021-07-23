@@ -1,0 +1,37 @@
+.header {
+  position: absolute;
+  right: 120px;
+  top: 27px;
+  display: flex;
+  font-family: "Roboto", sans-serif !important;
+  p {
+    margin-left: 10px;
+  }
+  &__call {
+    color: #6f7dff;
+    font-weight: 400;
+    font-size: 14px;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__call-responsive {
+    color: #6f7dff;
+    font-weight: 400;
+    font-size: 14px;
+    display: none;
+    @include respond(phone) {
+      display: flex;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  @include respond(phone) {
+    top: 20px;
+    right: 32px;
+  }
+}

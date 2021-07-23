@@ -1,0 +1,51 @@
+.form {
+  display: grid;
+  grid-gap: 16px;
+  &__group {
+    display: flex;
+    select {
+      height: 56px;
+      width: 96.67px;
+      border-radius: 4px 0 0 4px;
+      appearance: none;
+      padding: 2px 2px 2px 20px;
+      background: transparent url("../../img/chevrot.png") no-repeat right
+        center;
+      background-position: calc(100% - 10px) calc(1em + 8px),
+        calc(100% - 15px) calc(1em + 2px), 100% 0;
+    }
+    input {
+      flex: 1;
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+  }
+  &__input {
+    font-family: Lato;
+    background: #ffffff;
+    color: #494f66;
+    height: 56px;
+    border-radius: 4.02778px;
+    border: 1.00694px solid #c5cbe0;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    &::placeholder {
+      color: #a3abcc;
+    }
+  }
+  &__politics {
+    display: flex;
+    &:first-child {
+      margin-right: 12px;
+    }
+  }
+
+  &__buttom {
+    margin-top: 40px;
+    @include respond(phone) {
+      margin-top: 8px;
+    }
+  }
+}

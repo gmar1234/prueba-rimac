@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+  word-wrap: break-word;
+  color: #494f66;
+}
+
+:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5% !important; //1rem = 10px 10px/16px = 62.5%
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
